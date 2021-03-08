@@ -8,9 +8,11 @@ import skimage.transform as sktr
 def get_points(im1, im2):
     print('Selecciona dos puntos en cada imagen para alinear')
     plt.imshow(im1)
+#    print("G input: ",plt.ginput(2))
     p1, p2 = plt.ginput(2)
     plt.close()
     plt.imshow(im2)
+#    print("G input: ",plt.ginput(2))
     p3, p4 = plt.ginput(2)
     plt.close()
     return (p1, p2, p3, p4)
